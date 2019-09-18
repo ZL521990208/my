@@ -25,7 +25,9 @@ public class LoginServlet extends HttpServlet {
 
         //先获取session对象
         HttpSession session = req.getSession();
+        //把用户存入session对象
         session.setAttribute("username", username);
+        session.setAttribute("password",password);
         //客户端跳转，url变化成目标地址
         resp.sendRedirect("index.jsp");
 
